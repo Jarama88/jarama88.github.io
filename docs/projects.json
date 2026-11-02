@@ -64,7 +64,7 @@
     ],
     "year": "2025",
     "visual": "ford",
-    "description": "Aplicação de interface em Angular com páginas de login, home e dashboard, organizadas por rotas e componentes.",
+    "description": "Protótipo de interface de login em Angular, com estrutura de componentes e rotas para evolução da aplicação.",
     "tags": [
       "Angular 19",
       "TypeScript",
@@ -75,7 +75,9 @@
     "problem": "Organizar diferentes páginas de uma aplicação web em uma estrutura de componentes e navegação.",
     "approach": "Componentes independentes para login, home e dashboard, com carregamento por rota. Estilização com CSS e Bootstrap.",
     "evidence": "Rotas e componentes disponíveis no repositório público, com instruções de execução e build no README.",
-    "limits": "Projeto de interface. A página de login não representa autenticação real; não são alegadas integração com backend, persistência ou autorização implementadas.",
-    "learning": "Estrutura de componentes, navegação e consistência visual são parte da base para aplicações web mais completas."
+    "limits": "A tela de login é um protótipo visual. Home e dashboard ainda são esboços de componentes. Não há autenticação real, integração com backend ou persistência nesta versão.",
+    "learning": "Estrutura de componentes, navegação e consistência visual são parte da base para aplicações web mais completas.",
+    "demo_url": "https://programmergv.github.io/Ford/",
+    "demo_label": "Ver interface online ↗"
   }
 ]

@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: programmergv-edital-inteligente
+    runtime: python
+    plan: free
+    repo: https://github.com/ProgrammerGV/edital-inteligente
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: PYTHONUNBUFFERED
+        value: '1'
+      - key: EDITAL_BIND_HOST
+        value: 0.0.0.0
+  - type: web
+    name: programmergv-rastreador-editais
+    runtime: python
+    plan: free
+    repo: https://github.com/ProgrammerGV/INF032-Programa-o_Python
+    branch: main
+    rootDir: projeto/rastreador-editais
+    buildCommand: pip install -r requirements-demo.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 1 --timeout 120
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: PYTHONUNBUFFERED
+        value: '1'
+      - key: RASTREADOR_PUBLIC_DEMO
+        value: '1'
+      - key: FLASK_SECRET_KEY
+        generateValue: true

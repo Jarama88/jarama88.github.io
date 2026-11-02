@@ -32,7 +32,7 @@ function renderProjects(filter='all'){
     const info=element('div',undefined,'project-info');const meta=element('div',undefined,'project-meta');meta.append(element('span',project.category),element('span',`${project.number} / ${project.year}`));
     info.append(meta,element('h3',project.title),element('p',project.description,'project-description'));
     const tags=element('div',undefined,'project-tags');project.tags.forEach(tag=>tags.append(element('span',tag)));info.append(tags);
-    const links=element('div',undefined,'project-links');const button=element('button','Por dentro do projeto ↗','case-button');button.type='button';button.setAttribute('aria-label',`Ver detalhes de ${project.title}`);button.addEventListener('click',()=>openProject(project,button));links.append(button,externalLink('Código no GitHub ↗',project.repository));info.append(links);card.append(info);projectsRoot.append(card);
+    const links=element('div',undefined,'project-links');const button=element('button','Por dentro do projeto ↗','case-button');button.type='button';button.setAttribute('aria-label',`Ver detalhes de ${project.title}`);button.addEventListener('click',()=>openProject(project,button));links.append(button);if(project.demo_url)links.append(externalLink(project.demo_label||'Acessar projeto ↗',project.demo_url));links.append(externalLink('Código no GitHub ↗',project.repository));info.append(links);card.append(info);projectsRoot.append(card);
   }
 }
 function openProject(project,trigger){
@@ -40,7 +40,7 @@ function openProject(project,trigger){
   if(project.image){const image=element('img');image.src=project.image;image.alt=project.image_alt;dialogContent.append(image);}
   for(const [heading,key] of [['O problema','problem'],['Como foi construído','approach'],['Evidências','evidence'],['Limites da versão','limits'],['O que aprendi','learning']]){dialogContent.append(element('h3',heading),element('p',project[key]));}
   if(project.video){const video=element('video');video.controls=true;video.preload='none';video.src=project.video;video.setAttribute('aria-label','Demonstração do Edital Inteligente');video.textContent='Seu navegador não suporta vídeo.';dialogContent.append(video,element('p',project.video_caption,'video-caption'));}
-  const actions=element('div',undefined,'dialog-actions');actions.append(externalLink('Ver o código ↗',project.repository));if(project.article)actions.append(externalLink('Ler o artigo técnico ↗',project.article));dialogContent.append(actions);
+  const actions=element('div',undefined,'dialog-actions');if(project.demo_url)actions.append(externalLink(project.demo_label||'Acessar projeto ↗',project.demo_url));actions.append(externalLink('Ver o código ↗',project.repository));if(project.article)actions.append(externalLink('Ler o artigo técnico ↗',project.article));dialogContent.append(actions);
   dialog.showModal();document.body.classList.add('dialog-open');
 }
 document.getElementById('dialog-close').addEventListener('click',()=>dialog.close());

@@ -62,3 +62,7 @@ O vídeo é uma sequência de capturas reais, sem gravação contínua. Não há
 ## Atualizar o currículo
 
 Substitua `docs/assets/curriculo-gabriel-vinicius.pdf` pela versão atualizada mantendo o nome. O botão de abertura no início e o de download no contato usam esse mesmo arquivo.
+
+## Aplicações online
+
+O campo opcional `demo_url` em `docs/projects.json` adiciona um link de acesso ao projeto. `demo_label` define o texto do botão. Inclua somente endereços publicados e verificados. O Ford já está publicado no GitHub Pages; os dois apps Python têm configuração Free preparada em `render.yaml`, com ativação da conta e dos serviços Render ainda pendente.
