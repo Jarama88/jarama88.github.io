@@ -1,0 +1,60 @@
+# Portfólio — Gabriel Viniciús
+
+Site pessoal estático, responsivo e gratuito para apresentar projetos em candidaturas.
+
+**Endereço:** https://programmergv.github.io/
+
+## Sem custo de hospedagem
+
+O site usa GitHub Pages em repositório público. Não há domínio comprado, backend, formulário externo, analytics, API paga ou dependências npm. Os arquivos e o vídeo são servidos pelo próprio GitHub Pages. A oferta gratuita do provedor está sujeita às regras e limites publicados por ele.
+
+O site é independente de ChatGPT/Codex depois de publicado: visitantes não precisam de conta ou assinatura. O uso do assistente para desenvolver ou editar o código segue separadamente o plano da pessoa que o utiliza.
+
+## Adicionar um projeto
+
+1. No GitHub, abra `docs/projects.json` e clique em editar.
+2. Adicione um objeto à lista, separado por vírgula. Exemplo mínimo:
+
+```json
+{
+  "id": "meu-projeto",
+  "title": "Nome do projeto",
+  "category": "SOFTWARE / APLICAÇÃO WEB",
+  "filters": ["web"],
+  "description": "Qual problema o projeto resolve, sem prometer funcionalidades que ainda não existem.",
+  "tags": ["Python", "Flask"],
+  "repository": "https://github.com/ProgrammerGV/meu-projeto"
+}
+```
+
+3. Para detalhar o estudo de caso, acrescente `problem`, `approach`, `evidence`, `limits` e `learning`.
+4. Para usar uma captura real, envie o arquivo para `docs/assets/` e acrescente `image` (`assets/arquivo.png`), `image_alt` e `visual` (`edital`, para o estilo de captura). Sem imagem, deixe o padrão `generic`.
+5. Os filtros aceitos são `ia`, `automacao` e `web`. Um projeto pode aparecer em mais de um.
+6. Salve em `main`. O GitHub Pages atualizará a publicação; a disponibilidade pode levar alguns minutos.
+
+Para trocar bio, experiência ou links de contato, edite `docs/index.html`. Não coloque credenciais ou informações privadas nesse repositório público.
+
+## Executar localmente
+
+Na raiz do repositório, com Python instalado:
+
+```bash
+python scripts/check_site.py
+python -m http.server 5173 --bind 127.0.0.1 --directory docs
+```
+
+Abra `http://127.0.0.1:5173`. Abrir o HTML diretamente como arquivo pode bloquear a leitura de `projects.json`; use o servidor HTTP local.
+
+## Publicação
+
+GitHub → Settings → Pages → Deploy from a branch → `main` → `/docs`.
+
+`.nojekyll` mantém a distribuição estática sem gerador de páginas. O workflow de verificação usa Python e bibliotecas padrão, sem instalar pacotes. Também é possível publicar a pasta `docs` em outro serviço de hospedagem estática, observando os termos e limites do provedor.
+
+## Conteúdo e limites
+
+Os três projetos iniciais são Edital Inteligente, Rastreador de Editais e Ford. Imagens abstratas do rastreador e do Ford são identificadas como estruturas dos projetos; a imagem do Edital Inteligente é uma captura real.
+
+As métricas do Edital Inteligente se referem a recuperação de páginas em um corpus pequeno, não a acurácia de respostas de um LLM. A geração real com Ollama continua pendente de validação. Os detalhes da versão, a origem do código e a assistência de IA estão no repositório do projeto.
+
+O vídeo é uma sequência de capturas reais, sem gravação contínua. Não há envio de mensagens automático: os botões de contato abrem o LinkedIn.
