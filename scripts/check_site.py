@@ -39,7 +39,7 @@ def check():
     assert all(anchor in page.ids for anchor in page.anchors), 'Âncora sem destino.'
     for asset in page.assets:
         assert not urlparse(asset).scheme, 'Dependência externa no carregamento inicial.'
-        assert (SITE / asset).is_file(), f'Asset ausente: {asset}'
+        assert (SITE / urlparse(asset).path).is_file(), f'Asset ausente: {asset}'
     projects = json.loads((SITE / 'projects.json').read_text(encoding='utf-8'))
     assert projects and len({p['id'] for p in projects}) == len(projects), 'IDs de projeto duplicados.'
     for project in projects:
