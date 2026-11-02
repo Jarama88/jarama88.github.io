@@ -58,3 +58,7 @@ Os três projetos iniciais são Edital Inteligente, Rastreador de Editais e Ford
 As métricas de recuperação v1 do Edital Inteligente medem páginas, não respostas. A geração local v2 foi executada com Ollama e Llama 3.2 3B: 4/10 perguntas respondíveis atendidas corretamente e 6/6 casos ausentes recusados. A qualidade continua insuficiente para apresentar RAG completo; a busca é o modo principal e a geração é experimental. A avaliação é pequena e assistida por IA, sem revisão humana independente. Os relatórios, a origem do código e os limites estão no repositório do projeto.
 
 O vídeo é uma sequência de capturas reais, sem gravação contínua. Não há envio de mensagens automático: os botões de contato abrem o LinkedIn.
+
+## Atualizar o currículo
+
+Substitua `docs/assets/curriculo-gabriel-vinicius.pdf` pela versão atualizada mantendo o nome. O botão de abertura no início e o de download no contato usam esse mesmo arquivo.
