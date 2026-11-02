@@ -1,38 +1,81 @@
 [
   {
-    "id":"edital-inteligente","number":"01","title":"Edital Inteligente","category":"IA APLICADA / RECUPERAÇÃO DE INFORMAÇÃO","filters":["ia","web"],"year":"2026","visual":"edital",
-    "description":"Uma pergunta, os trechos relevantes e a página de origem. Consulta a editais públicos com busca por palavras e por significado.",
-    "tags":["Python","Flask","MiniLM","TF-IDF"],
-    "repository":"https://github.com/ProgrammerGV/edital-inteligente",
-    "article":"https://github.com/ProgrammerGV/edital-inteligente/blob/main/docs/artigo.md",
-    "image":"assets/edital-inteligente.png","image_alt":"Consulta real do Edital Inteligente com busca MiniLM, trecho recuperado e indicação da página 2 do edital.",
-    "problem":"Localizar uma publicação não resolve a dificuldade de encontrar e conferir informações dentro do edital.",
-    "approach":"Extração de cinco PDFs oficiais por página, divisão em trechos e comparação entre TF-IDF e embeddings multilíngues executados localmente. Interface Flask com fontes e links para conferência.",
-    "evidence":"24 testes automatizados e avaliação com 30 perguntas. Nas 15 perguntas respondíveis do conjunto final, o TF-IDF recuperou uma página correta no top 3 em 15 casos, e o MiniLM em 14.",
-    "limits":"Os números medem recuperação de páginas, não acerto de respostas. O corpus é pequeno. A geração com Ollama foi implementada, mas ainda não foi validada com o modelo real; o modo demonstrado é busca com evidências.",
-    "learning":"Uma referência simples pode superar embeddings. Avaliar informação ausente é tão importante quanto encontrar páginas relevantes.",
-    "video":"assets/edital-demo.mp4","video_caption":"Sequência de capturas reais da aplicação, sem gravação contínua."
+    "id": "edital-inteligente",
+    "number": "01",
+    "title": "Edital Inteligente",
+    "category": "IA APLICADA / RECUPERAÇÃO DE INFORMAÇÃO",
+    "filters": [
+      "ia",
+      "web"
+    ],
+    "year": "2026",
+    "visual": "edital",
+    "description": "Uma pergunta, os trechos relevantes e a página de origem. Consulta a editais públicos com busca por palavras e por significado.",
+    "tags": [
+      "Python",
+      "Flask",
+      "MiniLM",
+      "TF-IDF",
+      "Ollama"
+    ],
+    "repository": "https://github.com/ProgrammerGV/edital-inteligente",
+    "article": "https://github.com/ProgrammerGV/edital-inteligente/blob/main/docs/rag-local.md",
+    "image": "assets/edital-inteligente.png",
+    "image_alt": "Consulta real do Edital Inteligente com busca MiniLM, trecho recuperado e indicação da página 2 do edital.",
+    "problem": "Localizar uma publicação não resolve a dificuldade de encontrar e conferir informações dentro do edital.",
+    "approach": "Extração de cinco PDFs oficiais por página, divisão em trechos e comparação entre TF-IDF e embeddings multilíngues executados localmente. Interface Flask com fontes e links para conferência.",
+    "evidence": "36 testes automatizados. Recuperação v1: TF-IDF 15/15 e MiniLM 14/15 páginas relevantes no top 3. Geração local v2: 4/10 perguntas respondíveis atendidas corretamente e 6/6 casos sem resposta recusados.",
+    "limits": "A busca é o modo principal. O Llama 3.2 3B foi executado e avaliado, mas apresentou três citações inadequadas e três recusas indevidas em dez perguntas respondíveis. A geração é experimental, desativada por padrão. Avaliação pequena e assistida por IA, sem revisão humana independente.",
+    "learning": "Uma citação existir no PDF não garante que responda à pergunta. Os relatórios separam recuperação, correção, sustentação e recusas por regra ou modelo.",
+    "video": "assets/edital-demo.mp4",
+    "video_caption": "Geração experimental: exemplos de desenvolvimento em sequência de capturas reais, sem gravação contínua. No teste reservado, 4/10 respostas corretas; seis casos sem resposta recusados."
   },
   {
-    "id":"rastreador-editais","number":"02","title":"Rastreador de Editais","category":"AUTOMAÇÃO / COLETA DE DADOS","filters":["automacao"],"year":"2026","visual":"rastreador",
-    "description":"Monitoramento de publicações de concursos, com filtros por palavras-chave, histórico e painel web para acompanhar novidades.",
-    "tags":["Python","BeautifulSoup","Flask","Docker"],
-    "repository":"https://github.com/ProgrammerGV/INF032-Programa-o_Python/tree/main/projeto/rastreador-editais",
-    "problem":"Acompanhar manualmente diferentes páginas de editais torna difícil identificar novas publicações relevantes.",
-    "approach":"Coleta de páginas, análise de links por palavras-chave e histórico para identificar novidades. Painel Flask e notificações opcionais configuráveis.",
-    "evidence":"O código público inclui módulos de coleta, processamento, armazenamento e testes. Os dez testes existentes passaram durante a validação local da base; a página inicial respondeu HTTP 200.",
-    "limits":"Sites de origem podem mudar ou bloquear a coleta. A integração opcional com Gemini e as notificações externas não foram validadas com serviços reais nesta revisão. Não há métrica comprovada de horas economizadas.",
-    "learning":"Separar coleta, processamento e armazenamento facilita evoluir o rastreador para novas formas de consulta."
+    "id": "rastreador-editais",
+    "number": "02",
+    "title": "Rastreador de Editais",
+    "category": "AUTOMAÇÃO / COLETA DE DADOS",
+    "filters": [
+      "automacao"
+    ],
+    "year": "2026",
+    "visual": "rastreador",
+    "description": "Monitoramento de publicações de concursos, com filtros por palavras-chave, histórico e painel web para acompanhar novidades.",
+    "tags": [
+      "Python",
+      "BeautifulSoup",
+      "Flask",
+      "Docker"
+    ],
+    "repository": "https://github.com/ProgrammerGV/INF032-Programa-o_Python/tree/main/projeto/rastreador-editais",
+    "problem": "Acompanhar manualmente diferentes páginas de editais torna difícil identificar novas publicações relevantes.",
+    "approach": "Coleta de páginas, análise de links por palavras-chave e histórico para identificar novidades. Painel Flask e notificações opcionais configuráveis.",
+    "evidence": "O código público inclui módulos de coleta, processamento, armazenamento e testes. Os dez testes existentes passaram durante a validação local da base; a página inicial respondeu HTTP 200.",
+    "limits": "Sites de origem podem mudar ou bloquear a coleta. A integração opcional com Gemini e as notificações externas não foram validadas com serviços reais nesta revisão. Não há métrica comprovada de horas economizadas.",
+    "learning": "Separar coleta, processamento e armazenamento facilita evoluir o rastreador para novas formas de consulta."
   },
   {
-    "id":"ford","number":"03","title":"Ford · Interface Web","category":"FRONT-END / APLICAÇÃO ANGULAR","filters":["web"],"year":"2025","visual":"ford",
-    "description":"Aplicação de interface em Angular com páginas de login, home e dashboard, organizadas por rotas e componentes.",
-    "tags":["Angular 19","TypeScript","Bootstrap","CSS"],
-    "repository":"https://github.com/ProgrammerGV/Ford",
-    "problem":"Organizar diferentes páginas de uma aplicação web em uma estrutura de componentes e navegação.",
-    "approach":"Componentes independentes para login, home e dashboard, com carregamento por rota. Estilização com CSS e Bootstrap.",
-    "evidence":"Rotas e componentes disponíveis no repositório público, com instruções de execução e build no README.",
-    "limits":"Projeto de interface. A página de login não representa autenticação real; não são alegadas integração com backend, persistência ou autorização implementadas.",
-    "learning":"Estrutura de componentes, navegação e consistência visual são parte da base para aplicações web mais completas."
+    "id": "ford",
+    "number": "03",
+    "title": "Ford · Interface Web",
+    "category": "FRONT-END / APLICAÇÃO ANGULAR",
+    "filters": [
+      "web"
+    ],
+    "year": "2025",
+    "visual": "ford",
+    "description": "Aplicação de interface em Angular com páginas de login, home e dashboard, organizadas por rotas e componentes.",
+    "tags": [
+      "Angular 19",
+      "TypeScript",
+      "Bootstrap",
+      "CSS"
+    ],
+    "repository": "https://github.com/ProgrammerGV/Ford",
+    "problem": "Organizar diferentes páginas de uma aplicação web em uma estrutura de componentes e navegação.",
+    "approach": "Componentes independentes para login, home e dashboard, com carregamento por rota. Estilização com CSS e Bootstrap.",
+    "evidence": "Rotas e componentes disponíveis no repositório público, com instruções de execução e build no README.",
+    "limits": "Projeto de interface. A página de login não representa autenticação real; não são alegadas integração com backend, persistência ou autorização implementadas.",
+    "learning": "Estrutura de componentes, navegação e consistência visual são parte da base para aplicações web mais completas."
   }
 ]

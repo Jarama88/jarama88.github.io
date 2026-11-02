@@ -55,6 +55,6 @@ GitHub → Settings → Pages → Deploy from a branch → `main` → `/docs`.
 
 Os três projetos iniciais são Edital Inteligente, Rastreador de Editais e Ford. Imagens abstratas do rastreador e do Ford são identificadas como estruturas dos projetos; a imagem do Edital Inteligente é uma captura real.
 
-As métricas do Edital Inteligente se referem a recuperação de páginas em um corpus pequeno, não a acurácia de respostas de um LLM. A geração real com Ollama continua pendente de validação. Os detalhes da versão, a origem do código e a assistência de IA estão no repositório do projeto.
+As métricas de recuperação v1 do Edital Inteligente medem páginas, não respostas. A geração local v2 foi executada com Ollama e Llama 3.2 3B: 4/10 perguntas respondíveis atendidas corretamente e 6/6 casos ausentes recusados. A qualidade continua insuficiente para apresentar RAG completo; a busca é o modo principal e a geração é experimental. A avaliação é pequena e assistida por IA, sem revisão humana independente. Os relatórios, a origem do código e os limites estão no repositório do projeto.
 
 O vídeo é uma sequência de capturas reais, sem gravação contínua. Não há envio de mensagens automático: os botões de contato abrem o LinkedIn.
