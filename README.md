@@ -65,4 +65,4 @@ Substitua `docs/assets/curriculo-gabriel-vinicius.pdf` pela versão atualizada m
 
 ## Aplicações online
 
-O campo opcional `demo_url` em `docs/projects.json` adiciona um link de acesso ao projeto. `demo_label` define o texto do botão. Inclua somente endereços publicados e verificados. Os três projetos têm endereços públicos verificados: Ford no GitHub Pages e os dois apps Python no Render Free. `render.yaml` registra a configuração dos serviços existentes. Os servidores gratuitos podem entrar em repouso e demorar no primeiro acesso.
+O campo opcional `demo_url` em `docs/projects.json` adiciona um link de acesso ao projeto. `demo_label` define o texto do botão. Inclua somente endereços publicados e verificados. Os dois projetos em destaque têm endereços públicos verificados no Render Free. `render.yaml` registra a configuração dos serviços existentes. Os servidores gratuitos podem entrar em repouso e demorar no primeiro acesso.
