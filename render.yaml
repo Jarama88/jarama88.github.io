@@ -1,3 +1,4 @@
+# Referência dos serviços existentes no plano Free. Não é necessário recriá-los.
 services:
   - type: web
     name: programmergv-edital-inteligente
@@ -16,7 +17,7 @@ services:
       - key: EDITAL_BIND_HOST
         value: 0.0.0.0
   - type: web
-    name: programmergv-rastreador-editais
+    name: INF032-Programa-o_Python
     runtime: python
     plan: free
     repo: https://github.com/ProgrammerGV/INF032-Programa-o_Python
