@@ -18,7 +18,7 @@ function renderVisual(project){
     for(const [name,label] of [['Coletar páginas','01'],['Filtrar publicações','02'],['Registrar novidades','03']]){const row=element('div',undefined,'tracker-row');row.append(element('span',name),element('b',label));view.append(row);}view.append(element('p','Coleta → processamento → histórico','tracker-caption'));art.append(view);
   }else if(project.visual==='ford'){
     const view=element('div',undefined,'angular-view');view.append(element('div','A','angular-logo'),element('p','Uma aplicação. Três rotas.'));
-    const routes=element('div',undefined,'route-row');['/login','/home','/dashboard'].forEach((route,i)=>{if(i)routes.append(element('i','→'));routes.append(element('span',route));});view.append(routes,element('p','ANGULAR / TYPESCRIPT / COMPONENTES','angular-caption'));art.append(view);
+    const routes=element('div',undefined,'route-row');['/','/home','/dashboard'].forEach((route,i)=>{if(i)routes.append(element('i','→'));routes.append(element('span',route));});view.append(routes,element('p','ANGULAR / TYPESCRIPT / COMPONENTES','angular-caption'));art.append(view);
   }else{
     const view=element('div',undefined,'tracker-view');view.append(element('p',project.title),element('p',project.tags.join(' / '),'tracker-caption'));art.append(view);
   }
